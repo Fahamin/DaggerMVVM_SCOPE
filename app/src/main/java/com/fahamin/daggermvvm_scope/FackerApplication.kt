@@ -1,12 +1,11 @@
 package com.fahamin.daggermvvm_scope
 
 import android.app.Application
-import com.fahamin.daggermvvm_scope.di.ApplicationComponent
-import com.fahamin.daggermvvm_scope.di.DaggerApplicationComponent
 import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class FackerApplication: Application() {
-    lateinit var applicationComponent: ApplicationComponent
+   // lateinit var applicationComponent: ApplicationComponent
 
     override fun onCreate() {
         super.onCreate()
@@ -15,6 +14,6 @@ class FackerApplication: Application() {
         //applicationComponent = DaggerApplicationComponent.builder().build()
 
         // after use factory passing context
-        applicationComponent = DaggerApplicationComponent.factory().create(this)
+     //   applicationComponent = DaggerApplicationComponent.factory().create(this)
     }
 }
